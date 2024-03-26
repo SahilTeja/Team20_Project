@@ -62,7 +62,7 @@ public class DayManager : MonoBehaviour
             RenderSettings.ambientIntensity = Mathf.Lerp(dayIntensity, nightIntensity, lerp);
         }
 
-        if (SystemInfo.deviceType == DeviceType.Desktop && (!Input.GetKeyDown(KeyCode.JoystickButton9) && !(Input.GetKeyDown(KeyCode.Space))))
+        if (SystemInfo.deviceType == DeviceType.Desktop && (!Input.GetKeyDown(KeyCode.JoystickButton9) && !(Input.GetKeyDown(KeyCode.C))))
             return;
         else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton11))
             return;
