@@ -16,6 +16,7 @@ public class DayManager : MonoBehaviour
     public float duration = 0.5f;
     private bool isDay;
     private float changeTime = 0f;
+    private int numberOfDays = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,17 @@ public class DayManager : MonoBehaviour
     {
         changeTime = Time.time;
         isDay = !isDay;
+        numberOfDays++;
+    }
+
+    public bool IsDay()
+    {
+        return isDay;
+    }
+
+    public int GetNumDays()
+    {
+        return numberOfDays / 2;
     }
 
     public void Update()
