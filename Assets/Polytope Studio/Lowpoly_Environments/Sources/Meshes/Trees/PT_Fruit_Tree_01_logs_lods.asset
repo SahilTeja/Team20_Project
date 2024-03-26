@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-2835384853781117931
+--- !u!43 &-9024493842563203019
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PT_Fruit_Tree_01_logs LOD1
+  m_Name: PT_Fruit_Tree_01_logs LOD2
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -164,13 +164,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-1978095337412020124
+--- !u!43 &-5628116427383962832
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PT_Fruit_Tree_01_logs LOD2
+  m_Name: PT_Fruit_Tree_01_logs LOD1
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
