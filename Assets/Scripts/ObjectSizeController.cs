@@ -3,12 +3,7 @@ using UnityEngine;
 public class ObjectSizeController : MonoBehaviour
 {
     public int waterComponent = 0; // Water component as integer value
-    public float maxScale = 2.0f;
-    public float minScale = 0.5f;
-    public string controllerButton = "ButtonX"; // Name of the button on the controller
-
     private ObjectResizer objectResizer;
-    private DayNightCycleManager dayNightCycleManager;
     private int previousWaterComponent = 0;
 
     private void Start()
@@ -16,23 +11,14 @@ public class ObjectSizeController : MonoBehaviour
         // Get reference to ObjectResizer
         objectResizer = FindObjectOfType<ObjectResizer>();
 
-        // Get reference to DayNightCycleManager
-        dayNightCycleManager = FindObjectOfType<DayNightCycleManager>();
-
         // Subscribe to the day/night change event
-        if (dayNightCycleManager != null)
-        {
-            dayNightCycleManager.OnDayNightChange += OnDayNightChangeHandler;
-        }
+        DayNightCycleManager.OnDayNightChange += OnDayNightChangeHandler;
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe from the events to prevent memory leaks
-        if (dayNightCycleManager != null)
-        {
-            dayNightCycleManager.OnDayNightChange -= OnDayNightChangeHandler;
-        }
+        // Unsubscribe from the event to prevent memory leaks
+        DayNightCycleManager.OnDayNightChange -= OnDayNightChangeHandler;
     }
 
     private void Update()
