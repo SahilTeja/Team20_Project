@@ -702,6 +702,7 @@ MonoBehaviour:
     m_Bits: 8
   distance: 50
   offset: {x: -0.5, y: -0.5, z: 0}
+  active: 1
 --- !u!20 &401852729 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7287137020755404943, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
@@ -1268,6 +1269,7 @@ MonoBehaviour:
   speed: 1.5
   MainCam: {fileID: 401852729}
   menu: {fileID: 1431534225}
+  active: 0
 --- !u!1 &817431277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1497,7 @@ GameObject:
   - component: {fileID: 969110216}
   - component: {fileID: 969110215}
   - component: {fileID: 969110214}
+  - component: {fileID: 969110221}
   m_Layer: 3
   m_Name: Cube1
   m_TagString: MObj
@@ -1640,6 +1643,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969110212}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &969110221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969110212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816047ecf8505c54485213bd7cfcdd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToResize: {fileID: 817431277}
 --- !u!1 &999226548
 GameObject:
   m_ObjectHideFlags: 0
