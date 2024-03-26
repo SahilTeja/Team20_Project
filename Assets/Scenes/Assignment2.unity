@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.3137255, g: 0.6117647, b: 0.85098046, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.0045
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14686075, g: 0.364495, b: 0.57981074, a: 1}
+  m_IndirectSpecularColor: {r: 0.14741531, g: 0.36589086, b: 0.58208454, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -702,6 +702,7 @@ MonoBehaviour:
     m_Bits: 8
   distance: 50
   offset: {x: -0.5, y: -0.5, z: 0}
+  active: 1
 --- !u!20 &401852729 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7287137020755404943, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
@@ -1268,6 +1269,7 @@ MonoBehaviour:
   speed: 1.5
   MainCam: {fileID: 401852729}
   menu: {fileID: 1431534225}
+  active: 0
 --- !u!1 &817431277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3471,7 @@ GameObject:
   - component: {fileID: 2114334018}
   - component: {fileID: 2114334019}
   - component: {fileID: 2114334020}
+  - component: {fileID: 2114334021}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -3515,6 +3518,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0aa001a0b87694fa81cf431706efad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2114334021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114334017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969fc02895bddee4586e94d7a53d4092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 0}
+  nightColor: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0}
+  dayFog: {r: 0.3137255, g: 0.6117647, b: 0.8509804, a: 0}
+  nightFog: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 0}
+  dayDensity: 0.005
+  nightDensity: 0.01
+  dayIntensity: 1
+  nightIntensity: 0.5
 --- !u!1001 &3300347263155931979
 PrefabInstance:
   m_ObjectHideFlags: 0
