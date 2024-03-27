@@ -1,34 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DummyPlant : MonoBehaviour
 {
-
-    private int WaterLevel;
+    public int WaterLevel;
     public ParticleSystem water;
     public Color initial;
     public Color final;
     public float maxWater;
+    public Vector3 initialScale; // Store the initial scale of the object
 
-    // Start is called before the first frame update
     void Start()
     {
         WaterLevel = 0;
+        initialScale = transform.localScale; // Store the initial scale
+        ObjectResizer resizer = GetComponent<ObjectResizer>(); // Get ObjectResizer component
+        if (resizer != null)
+        {
+            // Subscribe to the OnDayNightChange event
+            DayNightCycleManager.Instance.OnDayNightChange.AddListener(resizer.OnDayNightChangeHandler);
+        }
+        else
+        {
+            Debug.LogError("ObjectResizer component not found on the object.");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //float lerp = Mathf.PingPong(Mathf.Clamp(WaterLevel , 0f, maxWater), maxWater) / maxWater;
-        //Color lerpedColor = Color.Lerp(initial, final, lerp);
+        // Existing code to maintain water level and color interpolation
         Color lerpedColor = Color.Lerp(initial, final, Mathf.Clamp(WaterLevel, 0f, maxWater) / maxWater);
         GetComponent<Renderer>().material.SetColor("_Color", lerpedColor);
     }
 
     void OnParticleCollision(GameObject other)
     {
-        if(WaterLevel <= 20)
+        if (WaterLevel <= 20)
             WaterLevel++;
     }
 }

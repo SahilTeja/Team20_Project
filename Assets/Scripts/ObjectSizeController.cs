@@ -1,57 +1,55 @@
-using UnityEngine;
+// using UnityEngine;
 
-public class ObjectSizeController : MonoBehaviour
-{
-    public int waterComponent = 0; // Water component as integer value
-    private ObjectResizer objectResizer;
-    private int previousWaterComponent = 0;
+// public class ObjectSizeController : MonoBehaviour
+// {
+//      // Water component as integer value
+//     private ObjectResizer objectResizer;
+//     private int previousWaterComponent = 0;
+//     public Color initial;
+//     public Color final;
+//     public float maxWater;
+//     private int WaterLevel;
 
-    private void Start()
-    {
-        // Get reference to ObjectResizer
-        objectResizer = FindObjectOfType<ObjectResizer>();
+//     private void Start()
+//     {
+//         // Get reference to ObjectResizer
+//         objectResizer = FindObjectOfType<ObjectResizer>();
 
-        // Subscribe to the day/night change event
-        DayNightCycleManager.OnDayNightChange += OnDayNightChangeHandler;
-    }
+//         // Subscribe to the day/night change event
+//         DayNightCycleManager.OnDayNightChange += OnDayNightChangeHandler;
+//     }
 
-    private void OnDestroy()
-    {
-        // Unsubscribe from the event to prevent memory leaks
-        DayNightCycleManager.OnDayNightChange -= OnDayNightChangeHandler;
-    }
+//     private void OnDestroy()
+//     {
+//         // Unsubscribe from the event to prevent memory leaks
+//         DayNightCycleManager.OnDayNightChange -= OnDayNightChangeHandler;
+//     }
 
-    private void Update()
-    {
-        // Your existing code for handling water pouring
-        if (Input.GetButtonDown("js1"))
-        {
-            // Check if the raycast hits this object
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.up, out hit))
-            {
-                if (hit.collider.gameObject == gameObject)
-                {
-                    // Increase the water component
-                    waterComponent++;
-                }
-            }
-        }
-    }
+//     private void Update()
+//     {
+//         Color lerpedColor = Color.Lerp(initial, final, Mathf.Clamp(WaterLevel, 0f, maxWater) / maxWater);
+//         GetComponent<Renderer>().material.SetColor("_Color", lerpedColor);
+//     }
 
-    private void OnDayNightChangeHandler(bool isDayTime)
-    {
-        // Check if a full day/night cycle has passed and waterComponent is greater than 0
-        if (isDayTime && waterComponent > 0)
-        {
-            // Resize the object
-            if (objectResizer != null)
-            {
-                objectResizer.ResizeObject();
-            }
-        }
+//         void OnParticleCollision(GameObject other)
+//         {
+//             if(WaterLevel <= 20)
+//                 WaterLevel++;
+//         }
 
-        // Update previous water component
-        previousWaterComponent = waterComponent;
-    }
-}
+//     private void OnDayNightChangeHandler(bool isDayTime)
+//     {
+//         // Check if a full day/night cycle has passed and waterComponent is greater than 0
+//         if (isDayTime && WaterLevel > 0)
+//         {
+//             // Resize the object
+//             if (objectResizer != null)
+//             {
+//                 objectResizer.ResizeObject();
+//             }
+//         }
+
+//         // Update previous water component
+//         previousWaterComponent = WaterLevel;
+//     }
+// }

@@ -18,7 +18,7 @@ public class WateringCanEmiiter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.JoystickButton1))
+        if(Input.GetKey(KeyCode.JoystickButton1) | Input.GetKey(KeyCode.B))
         {
             var emission = water.emission;
             emission.rateOverTime = 20;

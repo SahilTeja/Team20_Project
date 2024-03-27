@@ -397,6 +397,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 724045667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &111140625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111140627}
+  - component: {fileID: 111140626}
+  m_Layer: 0
+  m_Name: DayNightCycleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &111140626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111140625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c13ef156dfd334a855ab627b87649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDayNightChange:
+    m_PersistentCalls:
+      m_Calls: []
+  dayColor: {r: 0.63529414, g: 0.63529414, b: 0.63529414, a: 0}
+  nightColor: {r: 0.07450981, g: 0.07450981, b: 0.07450981, a: 0}
+  dayFog: {r: 0.18114388, g: 0.46707413, b: 0.6698113, a: 0}
+  nightFog: {r: 0.14150941, g: 0.1410644, b: 0.1410644, a: 0}
+  dayDensity: 0.005
+  nightDensity: 0.015
+  dayIntensity: 1
+  nightIntensity: 0.25
+  duration: 0.5
+--- !u!4 &111140627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111140625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.891068, y: 17.98804, z: 2.8534899}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &165012444
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,10 +863,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5184caca020b40f46b49328fba66d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterLevel: 0
   water: {fileID: 0}
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
+  initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &348959247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,7 +881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2c0e996fdda7940b90f1a7b027bdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 1.1
+  growTime: 1
+  growthAmount: 0.1
 --- !u!114 &348959248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,10 +2882,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5184caca020b40f46b49328fba66d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterLevel: 0
   water: {fileID: 0}
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
+  initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1025473471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2839,7 +2900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2c0e996fdda7940b90f1a7b027bdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 1.1
+  growTime: 1
+  growthAmount: 0.1
 --- !u!114 &1025473472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4748,10 +4810,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5184caca020b40f46b49328fba66d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterLevel: 0
   water: {fileID: 0}
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
+  initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1588934786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4764,7 +4828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2c0e996fdda7940b90f1a7b027bdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 1.1
+  growTime: 1
+  growthAmount: 0.1
 --- !u!114 &1588934787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5253,10 +5318,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5184caca020b40f46b49328fba66d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterLevel: 0
   water: {fileID: 0}
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
+  initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1813382218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5269,7 +5336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2c0e996fdda7940b90f1a7b027bdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 1.1
+  growTime: 1
+  growthAmount: 0.1
 --- !u!114 &1813382219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6082,6 +6150,7 @@ GameObject:
   - component: {fileID: 2095918126}
   - component: {fileID: 2095918125}
   - component: {fileID: 2095918124}
+  - component: {fileID: 2095918128}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -6096,15 +6165,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095918123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 969fc02895bddee4586e94d7a53d4092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 0}
-  nightColor: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0}
-  dayFog: {r: 0.3137255, g: 0.6117647, b: 0.8509804, a: 0}
-  nightFog: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 0}
+  dayColor:
+    r: 0.5764706
+    g: 0.5764706
+    b: 0.5764706
+    a: 0
+  nightColor:
+    r: 0.06666667
+    g: 0.06666667
+    b: 0.06666667
+    a: 0
+  dayFog:
+    r: 0.3137255
+    g: 0.6117647
+    b: 0.8509804
+    a: 0
+  nightFog:
+    r: 0.18039216
+    g: 0.18039216
+    b: 0.18039216
+    a: 0
   dayDensity: 0.005
   nightDensity: 0.015
   dayIntensity: 1
@@ -6149,6 +6234,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2095918128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095918123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c13ef156dfd334a855ab627b87649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDayNightChange:
+    m_PersistentCalls:
+      m_Calls: []
+  dayColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
+  nightColor: {r: 0, g: 0, b: 0, a: 0}
+  dayFog: {r: 0.42138356, g: 0.74042726, b: 1, a: 0}
+  nightFog: {r: 0, g: 0, b: 0, a: 0}
+  dayDensity: 0.005
+  nightDensity: 0.015
+  dayIntensity: 1
+  nightIntensity: 0.25
+  duration: 0.5
 --- !u!1 &2129916644
 GameObject:
   m_ObjectHideFlags: 0
