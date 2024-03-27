@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class ObjectResizer : MonoBehaviour
 {
-    public GameObject objectToResize;
-    public float scaleFactor = 1.2f;
+    private GameObject objectToResize;
+    public float scaleFactor = 1.1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        objectToResize = this.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Check if input button "js1" is pressed
-        if (Input.GetButtonDown("js1"))
-        {
-            ResizeObject();
-        }
+        if (SystemInfo.deviceType == DeviceType.Desktop && (!Input.GetKeyDown(KeyCode.JoystickButton8) && !(Input.GetKeyDown(KeyCode.R))))
+            return;
+        else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton10))
+            return;
+        ResizeObject();
     }
 
     
@@ -31,7 +31,7 @@ public class ObjectResizer : MonoBehaviour
         if (objectToResize != null)
         {
             Vector3 currentScale = objectToResize.transform.localScale;
-            Vector3 newScale = new Vector3(currentScale.x * scaleFactor, currentScale.y * scaleFactor, currentScale.z);
+            Vector3 newScale = new Vector3(currentScale.x * scaleFactor, currentScale.y * scaleFactor, currentScale.z * scaleFactor);
             objectToResize.transform.localScale = newScale;
         }
         else
