@@ -18,16 +18,21 @@ public class WateringCanEmiiter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.JoystickButton1) | Input.GetKey(KeyCode.B))
-        {
-            var emission = water.emission;
-            emission.rateOverTime = 20;
-            Debug.Log("Watering");
-        }
-        else
-        {
-            var emission = water.emission;
-            emission.rateOverTime = 0;
-        }
+        if (SystemInfo.deviceType == DeviceType.Desktop && (!Input.GetKey(KeyCode.JoystickButton1) && !Input.GetKey(KeyCode.B)))
+            {StopWater();return;}
+        else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKey(KeyCode.JoystickButton2))
+            {StopWater();return;}
+
+        var emission = water.emission;
+        emission.rateOverTime = 20;
+        Debug.Log("Watering");
+
+       
+    }
+
+    void StopWater()
+    {
+        var emission = water.emission;
+        emission.rateOverTime = 0;
     }
 }
