@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WateringCanEmiiter : MonoBehaviour
+{
+
+    [SerializeField]
+    private ParticleSystem water;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        var emission = water.emission;
+         emission.rateOverTime = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.JoystickButton1))
+        {
+            var emission = water.emission;
+            emission.rateOverTime = 20;
+            Debug.Log("Watering");
+        }
+        else
+        {
+            var emission = water.emission;
+            emission.rateOverTime = 0;
+        }
+    }
+}
