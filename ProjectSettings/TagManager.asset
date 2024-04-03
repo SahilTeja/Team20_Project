@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Menu
   - MObj
-  - Plant
   layers:
   - Default
   - TransparentFX
