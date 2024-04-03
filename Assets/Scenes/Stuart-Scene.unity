@@ -2153,6 +2153,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3975755338319131449, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
+      propertyPath: InheritVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975755338319131449, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975755338319131449, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3975755338336337090, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
       propertyPath: m_RootOrder
       value: 8
