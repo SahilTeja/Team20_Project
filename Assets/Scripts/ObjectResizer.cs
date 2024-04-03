@@ -18,10 +18,18 @@ public class ObjectResizer : MonoBehaviour
     {
         Debug.Log("Time Change");
         // Check if it's night and the object should grow
-        if (DayNightCycleManager.Instance.IsDay() && GetComponent<DummyPlant>().WaterLevel > 0)
+        if (DayNightCycleManager.Instance.IsDay() && GetComponent<DummyPlant>().WaterLevel >= GetComponent<DummyPlant>().neededWater)
         {
             Debug.Log("DayTime");
             growthEnd = Time.time + growTime;
+            return;
+        }
+        else
+        {
+            if(DayNightCycleManager.Instance.IsDay())
+            {
+                GetComponent<DummyPlant>().WaterLevel = 0;
+            }
         }
     }
 
@@ -38,5 +46,10 @@ public class ObjectResizer : MonoBehaviour
     void Grow()
     {
         transform.localScale += Vector3.one * growthAmount * Time.deltaTime;
+        GetComponent<DummyPlant>().WaterLevel = (int)(GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
+        if(GetComponent<DummyPlant>().WaterLevel < 0)
+        {
+            GetComponent<DummyPlant>().WaterLevel = 0;
+        }
     }
 }

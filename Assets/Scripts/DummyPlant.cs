@@ -7,6 +7,7 @@ public class DummyPlant : MonoBehaviour
     public Color initial;
     public Color final;
     public float maxWater;
+    public float neededWater;
     public Vector3 initialScale; // Store the initial scale of the object
 
     void Start()
@@ -34,7 +35,7 @@ public class DummyPlant : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        if (WaterLevel <= 20)
+        if (WaterLevel < 20)
             WaterLevel++;
     }
 }
