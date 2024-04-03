@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class ObjectResizer : MonoBehaviour
 {
@@ -18,18 +19,26 @@ public class ObjectResizer : MonoBehaviour
     {
         Debug.Log("Time Change");
         // Check if it's night and the object should grow
-        if (DayNightCycleManager.Instance.IsDay() && GetComponent<DummyPlant>().WaterLevel >= GetComponent<DummyPlant>().neededWater)
+        if (DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel >= GetComponent<DummyPlant>().neededWater))
         {
             Debug.Log("DayTime");
             growthEnd = Time.time + growTime;
-            return;
-        }
-        else
-        {
-            if(DayNightCycleManager.Instance.IsDay())
+            GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
+            if(GetComponent<DummyPlant>().WaterLevel < 0)
             {
                 GetComponent<DummyPlant>().WaterLevel = 0;
             }
+            return;
+        }
+        if(DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel < GetComponent<DummyPlant>().neededWater))
+        {
+            GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
+            if(GetComponent<DummyPlant>().WaterLevel < 0)
+            {
+                GetComponent<DummyPlant>().WaterLevel = 0;
+            }
+
+            return;
         }
     }
 
@@ -40,16 +49,13 @@ public class ObjectResizer : MonoBehaviour
         {
             Grow();
         }
+        
     }
 
     // Increase the size of the object
     void Grow()
     {
         transform.localScale += Vector3.one * growthAmount * Time.deltaTime;
-        GetComponent<DummyPlant>().WaterLevel = (int)(GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
-        if(GetComponent<DummyPlant>().WaterLevel < 0)
-        {
-            GetComponent<DummyPlant>().WaterLevel = 0;
-        }
+        
     }
 }

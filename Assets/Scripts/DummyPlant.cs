@@ -7,7 +7,7 @@ public class DummyPlant : MonoBehaviour
     public Color initial;
     public Color final;
     public float maxWater;
-    public float neededWater;
+    public int neededWater;
     public Vector3 initialScale; // Store the initial scale of the object
 
     void Start()
