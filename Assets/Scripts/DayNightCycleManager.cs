@@ -54,6 +54,19 @@ public class DayNightCycleManager : MonoBehaviour
         OnDayNightChange?.Invoke();
     }
 
+    public void setDay(bool setToDay)
+    {
+        if (setToDay != isDay)
+        {
+            changeTime = Time.time;
+            isDay = setToDay;
+            numberOfDays++;
+
+            // Trigger the event when day/night changes
+            OnDayNightChange?.Invoke();
+        }
+    }
+
     public bool IsDay()
     {
         return isDay;
