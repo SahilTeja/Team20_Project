@@ -1,42 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectResizer : MonoBehaviour
 {
-    public GameObject objectToResize;
-    public float scaleFactor = 1.2f;
+    private bool isGrowing = false; // Flag to track growth state
+    public float growTime = 1.0f;
+    private float growthEnd = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    public float growthAmount = 0.1f; // Amount to grow when it's night
+
+    public void Start()
     {
-        
+        growthEnd=Time.time;
     }
 
-    // Update is called once per frame
+    // Start growing the object
+    public void OnDayNightChangeHandler()
+    {
+        Debug.Log("Time Change");
+        // Check if it's night and the object should grow
+        if (DayNightCycleManager.Instance.IsDay() && GetComponent<DummyPlant>().WaterLevel > 0)
+        {
+            Debug.Log("DayTime");
+            growthEnd = Time.time + growTime;
+        }
+    }
+
     void Update()
     {
-        // Check if input button "js1" is pressed
-        if (Input.GetButtonDown("js1"))
+        // If it's growing, increase the size
+        if (growthEnd > Time.time)
         {
-            ResizeObject();
+            Grow();
         }
     }
 
-    
-
-    // Function to resize the object with a specified size
-    public void ResizeObject()
+    // Increase the size of the object
+    void Grow()
     {
-        if (objectToResize != null)
-        {
-            Vector3 currentScale = objectToResize.transform.localScale;
-            Vector3 newScale = new Vector3(currentScale.x * scaleFactor, currentScale.y * scaleFactor, currentScale.z);
-            objectToResize.transform.localScale = newScale;
-        }
-        else
-        {
-            Debug.LogWarning("Object to resize is not assigned!");
-        }
+        transform.localScale += Vector3.one * growthAmount * Time.deltaTime;
     }
 }
