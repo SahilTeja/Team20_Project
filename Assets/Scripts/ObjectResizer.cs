@@ -16,7 +16,6 @@ public class ObjectResizer : MonoBehaviour
     // Start growing the object
     public void OnDayNightChangeHandler()
     {
-        Debug.Log("Time Change");
         // Check if it's night and the object should grow
         if (DayNightCycleManager.Instance.IsDay() && GetComponent<DummyPlant>().WaterLevel > 0)
         {
