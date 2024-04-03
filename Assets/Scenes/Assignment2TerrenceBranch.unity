@@ -1175,7 +1175,6 @@ MonoBehaviour:
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
-  storedWater: 0
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &348959247
@@ -2978,7 +2977,6 @@ MonoBehaviour:
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
-  storedWater: 0
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1025473471
@@ -4960,7 +4958,6 @@ MonoBehaviour:
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
-  storedWater: 0
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1588934786
@@ -5392,7 +5389,6 @@ MonoBehaviour:
   initial: {r: 1, g: 0, b: 0, a: 0}
   final: {r: 0, g: 1, b: 0, a: 0}
   maxWater: 20
-  storedWater: 0
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1813382218
