@@ -7,11 +7,17 @@ public class ObjectResizer : MonoBehaviour
     public float growTime = 1.0f;
     private float growthEnd = 0;
 
+    public int numStages = 3;
+    private int currentStage = 0;
+
     public float growthAmount = 0.1f; // Amount to grow when it's night
+
+    private DummyPlant soil;
 
     public void Start()
     {
         growthEnd=Time.time;
+        soil = GetComponentInParent<DummyPlant>();
     }
 
     // Start growing the object
@@ -19,23 +25,24 @@ public class ObjectResizer : MonoBehaviour
     {
         Debug.Log("Time Change");
         // Check if it's night and the object should grow
-        if (DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel >= GetComponent<DummyPlant>().neededWater))
+        if (DayNightCycleManager.Instance.IsDay() && (soil.WaterLevel >= soil.neededWater))
         {
             Debug.Log("DayTime");
             growthEnd = Time.time + growTime;
-            GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
-            if(GetComponent<DummyPlant>().WaterLevel < 0)
+            currentStage++;
+            soil.WaterLevel = (soil.WaterLevel - soil.neededWater);
+            if(soil.WaterLevel < 0)
             {
-                GetComponent<DummyPlant>().WaterLevel = 0;
+                soil.WaterLevel = 0;
             }
             return;
         }
-        if(DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel < GetComponent<DummyPlant>().neededWater))
+        if(DayNightCycleManager.Instance.IsDay() && (soil.WaterLevel < soil.neededWater))
         {
-            GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
-            if(GetComponent<DummyPlant>().WaterLevel < 0)
+            soil.WaterLevel = (soil.WaterLevel - soil.neededWater);
+            if(soil.WaterLevel < 0)
             {
-                GetComponent<DummyPlant>().WaterLevel = 0;
+                soil.WaterLevel = 0;
             }
 
             return;
@@ -55,7 +62,16 @@ public class ObjectResizer : MonoBehaviour
     // Increase the size of the object
     void Grow()
     {
-        transform.localScale += Vector3.one * growthAmount * Time.deltaTime;
-        
+        if (currentStage <= numStages)
+        {
+            transform.localScale += Vector3.one * growthAmount * Time.deltaTime;
+        }
+            
     }
+
+    bool isHarvestable()
+    {
+        return currentStage >= 3;
+    }
+    
 }
