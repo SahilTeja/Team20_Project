@@ -9,6 +9,7 @@ public class RaycastActions: MonoBehaviour
     private GameObject gameController;
     private GameObject player;
     private bool isActive = true;
+    private bool hasPlant;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,8 @@ public class RaycastActions: MonoBehaviour
         }
         if (!clipboard)
             Debug.LogError("Clipboard not found on GameController");
+
+        hasPlant = false;
     }
 
     // Update is called once per frame
@@ -39,15 +42,26 @@ public class RaycastActions: MonoBehaviour
         {
             if (IsAPressed())
             {
-                if (clipboard.Paste())
+                Debug.Log("A Pressed");
+                GameObject obj = hit.transform.gameObject;
+                if(obj.tag == "Plant")
                 {
-                    GameObject obj = clipboard.Paste();
-                    if (clipboard.isCopy())
-                        obj = Instantiate(clipboard.Paste(), hit.point + Vector3.up * (clipboard.Paste().transform.localScale.y / 2), Quaternion.identity);
-                    else
-                        obj.transform.position = hit.point + Vector3.up * (clipboard.Paste().transform.localScale.y / 2);
-                    obj.SetActive(true);
-                    obj.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+                    if(obj.GetComponent<DummyPlant>().growthStage == obj.GetComponent<DummyPlant>().maxGrowthStages)
+                    {
+                        obj.GetComponent<DummyPlant>().Harvest();
+                        hasPlant = true;
+                        return;
+                    }
+                    return;
+                }
+                else if(obj.tag == "TurnIn")
+                {
+                    if(hasPlant)
+                    {
+                        Debug.Log("Plant Turned In");
+                        GameObject player = GameObject.FindGameObjectWithTag("Player");
+                        player.GetComponent<WeaponSwitcher>().changeWeapon(0);
+                    }
                 }
             }
             else if (IsYPressed())
@@ -71,7 +85,7 @@ public class RaycastActions: MonoBehaviour
 
     private bool IsAPressed()
     {
-        if (SystemInfo.deviceType == DeviceType.Desktop && !Input.GetKeyDown(KeyCode.JoystickButton8))
+        if (SystemInfo.deviceType == DeviceType.Desktop && !Input.GetKeyDown("k"))
             return false;
         else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton10))
             return false;

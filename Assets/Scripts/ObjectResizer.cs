@@ -22,12 +22,17 @@ public class ObjectResizer : MonoBehaviour
         if (DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel >= GetComponent<DummyPlant>().neededWater))
         {
             Debug.Log("DayTime");
-            growthEnd = Time.time + growTime;
-            GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
-            if(GetComponent<DummyPlant>().WaterLevel < 0)
-            {
-                GetComponent<DummyPlant>().WaterLevel = 0;
-            }
+                GetComponent<DummyPlant>().WaterLevel = (GetComponent<DummyPlant>().WaterLevel - GetComponent<DummyPlant>().neededWater);
+                if(GetComponent<DummyPlant>().WaterLevel < 0)
+                {
+                    GetComponent<DummyPlant>().WaterLevel = 0;
+                }
+                if(GetComponent<DummyPlant>().growthStage < GetComponent<DummyPlant>().maxGrowthStages)
+                {   
+                    growthEnd = Time.time + growTime;
+                    GetComponent<DummyPlant>().growthStage++;
+                    return;
+                }
             return;
         }
         if(DayNightCycleManager.Instance.IsDay() && (GetComponent<DummyPlant>().WaterLevel < GetComponent<DummyPlant>().neededWater))
