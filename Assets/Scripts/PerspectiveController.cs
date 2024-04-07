@@ -15,6 +15,8 @@ public class PerspectiveController : MonoBehaviour
     public bool active;
 
     private MenuManager menuMan;
+    private bool mainMenuOpen = false;
+
 
 
     void Start()
@@ -54,12 +56,30 @@ public class PerspectiveController : MonoBehaviour
             Physics.SyncTransforms();
         }
 
-        if (SystemInfo.deviceType == DeviceType.Desktop && !Input.GetKeyDown(KeyCode.JoystickButton3))
-            return;
-        else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton7))
-            return;
-        menuMan.openMainMenu(menu);
-        
+
+        if (SystemInfo.deviceType == DeviceType.Desktop && Input.GetKeyDown(KeyCode.JoystickButton3))
+        {
+            ToggleMainMenu();
+        }
+        else if (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKeyDown(KeyCode.JoystickButton7))
+        {
+            ToggleMainMenu();
+        }
+
+    }
+
+    void ToggleMainMenu()
+    {
+        if (mainMenuOpen)
+        {
+            menuMan.exitMenu();
+            mainMenuOpen = false;
+        }
+        else
+        {
+            menuMan.openMainMenu(menu);
+            mainMenuOpen = true;
+        }
     }
 
     public void SetCharacterController(bool b)

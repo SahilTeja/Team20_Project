@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!43 &-6541851393847047714
+--- !u!43 &-7300795184252910272
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PT_Modular_Fence_Wood_02 LOD2
+  m_Name: Cube.001 LOD2
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -151,8 +151,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.95073205, y: 0.70772517, z: 0.02841881}
-    m_Extent: {x: 1.1001154, y: 0.8689383, z: 0.12250084}
+    m_Center: {x: 18.523554, y: 0.1558516, z: 0.5383024}
+    m_Extent: {x: 22.269026, y: 5.7939625, z: 14.990663}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -164,13 +164,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &-4901811887926288312
+--- !u!43 &-4852808110974995345
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PT_Modular_Fence_Wood_02 LOD1
+  m_Name: Cube.001 LOD1
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -315,8 +315,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.95073205, y: 0.70772517, z: 0.02841881}
-    m_Extent: {x: 1.1001154, y: 0.8689383, z: 0.12250084}
+    m_Center: {x: 18.523554, y: 0.1558516, z: 0.5383024}
+    m_Extent: {x: 22.269026, y: 5.7939625, z: 14.990663}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e927627221206e04dba83232f13d1949, type: 3}
-  m_Name: PT_Modular_Fence_Wood_02_lods
+  m_Name: Watering Can_lods
   m_EditorClassIdentifier: 
   overrideDefaults: 0
   importSettings:
@@ -349,11 +349,11 @@ MonoBehaviour:
     maxLODGenerated: 2
     initialLODMaxPolyCount: 500000
   lod0:
-  - {fileID: 2300000, guid: b67d2b761d3397348831d776dbb33e03, type: 3}
+  - {fileID: 7141681902929312393, guid: 158f788eeb1973d45933b060a20c6a8b, type: 3}
   lod1:
-  - {fileID: 3613073700564821271, guid: b67d2b761d3397348831d776dbb33e03, type: 3}
+  - {fileID: -4224850486851179093, guid: 158f788eeb1973d45933b060a20c6a8b, type: 3}
   lod2:
-  - {fileID: -1181191160523001717, guid: b67d2b761d3397348831d776dbb33e03, type: 3}
+  - {fileID: 6993689714893457016, guid: 158f788eeb1973d45933b060a20c6a8b, type: 3}
   lod3: []
   lod4: []
   lod5: []

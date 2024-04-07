@@ -18,9 +18,17 @@ public class CCEMenu : MonoBehaviour
     private ViewActive VA;
     private TextMeshProUGUI textbox;
 
+
+    public GameObject seedPrefab;
+    public Transform spawnPoint;
+    public GameObject menu;
+    private bool ismenuOpen = false;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+         
         CM = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
         gameController = GameObject.FindGameObjectWithTag("GameController");
         clipboard = gameController.GetComponent<Clipboard>();
@@ -37,7 +45,47 @@ public class CCEMenu : MonoBehaviour
         if (!clipboard)
             Debug.LogError("Clipboard not found on GameController");
 
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = transform;
+        }
+
     }
+
+    /*void Update()
+    {
+       /* if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKey(KeyCode.JoystickButton3) && Input.GetKey(KeyCode.B)))
+        {
+            
+            return;
+        }
+            
+        else if (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKey(KeyCode.JoystickButton3))
+        {
+            
+            return;
+        }
+        if (Input.GetButtonDown("js3") && ismenuOpen == false)
+        {
+            Debug.LogError("open");
+            menu.SetActive(true);
+            ismenuOpen = true;
+
+
+        }
+        else if (Input.GetButtonDown("js3") && ismenuOpen == true)
+        {
+            Debug.LogError("close");
+            menu.SetActive(false);
+            ismenuOpen = false;
+
+        }
+
+
+
+
+    }*/
 
     public void Copy()
     {
@@ -55,7 +103,16 @@ public class CCEMenu : MonoBehaviour
 
     public void Exit()
     {
-        menuMan.exitMenu();
+        //menuMan.exitMenu();
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
     }
 
     public void Raycast()
@@ -77,5 +134,11 @@ public class CCEMenu : MonoBehaviour
         Application.Quit();
     }
 
-
+    public void ToggleMenu()
+    {
+        
+        
+    }
+    
 }
+    
