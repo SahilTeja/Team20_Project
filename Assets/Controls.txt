@@ -1,0 +1,16 @@
+Desktop:
+Change Day - Joystick Button 9/C
+Open Options Menu - Joystick Button 3 (Perspective Controller.cs)
+Teleport - Joystick Button 0 (RaycastActions.cs)
+Watering Can - Joystick Button 1 (WateringCanEmitter)
+Paste - Joystick Button 8 (RaycastActions.cs) //not possible, copy menu is disabled
+
+Handheld:
+Change Day - Joystick Button 11
+Open Options Menu - Joystick Button 7 (Perspective Controller.cs)
+Teleport - Joystick Button 3 (RaycastActions.cs)
+Watering Can - Joystick Button 2 (WateringCanEmitter)
+Paste - Joystick Button 10 (RaycastActions.cs) //not possible, copy menu is disabled
+
+Unused Buttons:
+Open Menu - Joystick Button 1/Joystick Button 2 (OpenMenu.cs)
