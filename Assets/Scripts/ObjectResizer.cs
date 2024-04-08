@@ -8,9 +8,11 @@ public class ObjectResizer : MonoBehaviour
     private float growthEnd = 0;
 
     public int numStages = 3;
-    private int currentStage = 0;
+    public int currentStage = 0;
 
     public float growthAmount = 0.1f; // Amount to grow when it's night
+
+    public int plantType;
 
     private DummyPlant soil;
 
@@ -69,9 +71,14 @@ public class ObjectResizer : MonoBehaviour
             
     }
 
-    bool isHarvestable()
+    public bool isHarvestable()
     {
-        return currentStage >= 3;
+        return currentStage >= numStages;
+    }
+
+    public void Harvest()
+    {
+        Destroy(gameObject);
     }
     
 }
