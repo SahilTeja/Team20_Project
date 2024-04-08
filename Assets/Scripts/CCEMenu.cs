@@ -21,10 +21,7 @@ public class CCEMenu : MonoBehaviour
 
     public GameObject seedPrefab;
     public Transform spawnPoint;
-    public GameObject menu;
-    private bool ismenuOpen = false;
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -53,45 +50,11 @@ public class CCEMenu : MonoBehaviour
 
     }
 
-    /*void Update()
-    {
-       /* if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKey(KeyCode.JoystickButton3) && Input.GetKey(KeyCode.B)))
-        {
-            
-            return;
-        }
-            
-        else if (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKey(KeyCode.JoystickButton3))
-        {
-            
-            return;
-        }
-        if (Input.GetButtonDown("js3") && ismenuOpen == false)
-        {
-            Debug.LogError("open");
-            menu.SetActive(true);
-            ismenuOpen = true;
-
-
-        }
-        else if (Input.GetButtonDown("js3") && ismenuOpen == true)
-        {
-            Debug.LogError("close");
-            menu.SetActive(false);
-            ismenuOpen = false;
-
-        }
-
-
-
-
-    }*/
-
     public void Copy()
     {
         clipboard.Copy(transform.root.gameObject);
         clipboard.setCopy(true);
-        Exit();
+        Daikon();
     }
 
     public void Cut()
@@ -101,7 +64,7 @@ public class CCEMenu : MonoBehaviour
         transform.root.gameObject.SetActive(false);
     }
 
-    public void Exit()
+    public void Daikon()
     {
         //menuMan.exitMenu();
         if (seedPrefab != null)
@@ -115,29 +78,47 @@ public class CCEMenu : MonoBehaviour
         }
     }
 
-    public void Raycast()
-    {
-        int temp = raycast[++rayIndex % raycast.Length];
-        VA.distance = temp;
-        textbox.text = "Raycast: " + temp;
-    }
-
-    public void Speed()
-    {
-        int temp = speed[++speedIndex % (speed.Length)];
-        CM.speed = temp;
-        textbox.text = "Speed: " + temp;
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-    }
-
-    public void ToggleMenu()
+    public void Parsnip()
     {
         
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
+
+    }
+
+    public void Radish()
+    {
+       
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
+    }
+
+    public void Beet()
+    {
         
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
     }
     
 }
