@@ -59,7 +59,7 @@ public class RaycastActions: MonoBehaviour
                 else if(obj.tag == "Plant")
                 {   
                     Debug.Log("Detected Plant");
-                    if(obj.GetComponent<ObjectResizer>().isHarvestable())
+                    if(obj.GetComponent<ObjectResizer>().isHarvestable() && !hasPlant)
                     {
                         Debug.Log("Plant is Harvestable");
                         player.GetComponent<WeaponSwitcher>().changeWeapon(obj.GetComponent<ObjectResizer>().plantType);
