@@ -8,6 +8,7 @@ TagManager:
   - MObj
   - Plant
   - TurnIn
+  - DirtPile
   layers:
   - Default
   - TransparentFX

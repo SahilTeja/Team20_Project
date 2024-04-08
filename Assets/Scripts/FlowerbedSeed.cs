@@ -36,6 +36,11 @@ public class FlowerbedSeed : MonoBehaviour
             {
                 Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green); // Draw the raycast for debugging
 
+                if(hit.transform.CompareTag("DirtPile"))
+                {
+                    Debug.Log("Hit " + hit.transform.name);
+                }
+
                 for (int i = 0; i < dirtPiles.Length; i++)
                 {
                     if (hit.collider.gameObject == dirtPiles[i] && Vector3.Distance(hit.point, dirtPiles[i].transform.position) < maxDistance)
