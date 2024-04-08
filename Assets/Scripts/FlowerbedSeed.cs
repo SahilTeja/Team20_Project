@@ -9,12 +9,17 @@ public class FlowerbedSeed : MonoBehaviour
 
     void Start()
     {
+
+        string debugArray = "";
         // Find Dirt_Pile objects by their tags
         GameObject[] allDirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
         for (int i = 0; i < Mathf.Min(allDirtPiles.Length, dirtPiles.Length); i++)
         {
             dirtPiles[i] = allDirtPiles[i];
+            debugArray += dirtPiles[i].name + " ";
         }
+
+        Debug.Log(debugArray);
 
         // Check if the number of Dirt_Pile objects found matches the array size
         if (allDirtPiles.Length < dirtPiles.Length)

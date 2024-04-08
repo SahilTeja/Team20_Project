@@ -2120,6 +2120,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 423464187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &428335102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7402686243457576860, guid: 34eeb2cb91f7d194ab79f62556db74e5, type: 3}
+  m_PrefabInstance: {fileID: 7401686240521377876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &428335108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428335102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1 &433028074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -2498,7 +2524,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  maxDistance: 0.1
+  maxDistance: 0.5
 --- !u!1 &492474404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -2646,6 +2672,27 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+--- !u!114 &521699188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521699182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1 &528813965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -5282,6 +5329,32 @@ Transform:
   m_Father: {fileID: 408279948}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1042649363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9160771877022209927, guid: b48787c79da404c4d9b3f18fce44c671, type: 3}
+  m_PrefabInstance: {fileID: 9160907670709716136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042649369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042649363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1 &1047807029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5630,32 @@ Transform:
   m_Father: {fileID: 1684187857}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1113905534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2081127276798883487, guid: 9f969b2c4b35b314e904e83b714710ce, type: 3}
+  m_PrefabInstance: {fileID: 2081274055878004438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1113905540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113905534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1 &1117536755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5991,6 +6090,27 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1189647974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189647968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1001 &1210312201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6710,6 +6830,32 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.1
+--- !u!1 &1426862017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1177102467720949125, guid: 3a656f7dd87343b49a11371f876c6f3c, type: 3}
+  m_PrefabInstance: {fileID: 1177240452241017499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1426862023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426862017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1 &1427572568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -9605,6 +9751,27 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1981544965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981544959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f2a386dfbb49f4f829a872c08235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtPiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxDistance: 0.5
 --- !u!1001 &2010275793
 PrefabInstance:
   m_ObjectHideFlags: 0
