@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class FlowerbedSeed : MonoBehaviour
 {
-    public GameObject[] dirtPiles = new GameObject[7];
+    public GameObject[] dirtPiles;
     public float maxDistance = 0.1f; 
 
     void Start()
     {
-        GameObject[] allDirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
-        for (int i = 0; i < Mathf.Min(allDirtPiles.Length, dirtPiles.Length); i++)
+        // Find Dirt_Pile objects by their tags
+        dirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
+        
+        // Check if any Dirt_Pile objects are found
+        if (dirtPiles.Length == 0)
         {
-            dirtPiles[i] = allDirtPiles[i];
-        }
-
-        if (allDirtPiles.Length < dirtPiles.Length)
-        {
-            Debug.LogWarning("Number of Dirt_Pile objects found is less than expected.");
+            Debug.LogWarning("No Dirt_Pile objects found.");
         }
     }
+
 
     void Update()
     {
@@ -31,7 +30,7 @@ public class FlowerbedSeed : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green);
+                Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green); // Draw the raycast for debugging
 
                 for (int i = 0; i < dirtPiles.Length; i++)
                 {
@@ -49,12 +48,14 @@ public class FlowerbedSeed : MonoBehaviour
 
     void InstantiateSeed(Vector3 position)
     {
+        // Adjust the position slightly above the dirt pile's position
         position += Vector3.up * 0.1f;
+
         Debug.Log("Seed instantiated at position: " + position);
 
-        GameObject seed = GameObject.CreatePrimitive(PrimitiveType.Sphere); 
-        seed.transform.position = position; 
-        seed.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); 
-        seed.GetComponent<Renderer>().material.color = Color.yellow; 
+        GameObject seed = GameObject.CreatePrimitive(PrimitiveType.Sphere); // Create a sphere object
+        seed.transform.position = position; // Set the position to the dirt pile's position
+        seed.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Adjust scale as needed
+        seed.GetComponent<Renderer>().material.color = Color.yellow; // Adjust color as needed
     }
 }
