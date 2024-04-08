@@ -4,17 +4,18 @@ public class DummyPlant : MonoBehaviour
 {
     public int WaterLevel;
     public ParticleSystem water;
-    public Color initial;
-    public Color final;
+    private Material soilMaterial;
     public float maxWater;
     public int neededWater;
     public Vector3 initialScale; // Store the initial scale of the object
 
     void Start()
     {
+        Renderer renderer = GetComponent<Renderer>();
+        soilMaterial = renderer.material;
         WaterLevel = 0;
         initialScale = transform.localScale; // Store the initial scale
-        ObjectResizer resizer = GetComponent<ObjectResizer>(); // Get ObjectResizer component
+        ObjectResizer resizer = GetComponentInChildren<ObjectResizer>(); // Get ObjectResizer component
         if (resizer != null)
         {
             // Subscribe to the OnDayNightChange event
@@ -28,9 +29,7 @@ public class DummyPlant : MonoBehaviour
 
     void Update()
     {
-        // Existing code to maintain water level and color interpolation
-        Color lerpedColor = Color.Lerp(initial, final, Mathf.Clamp(WaterLevel, 0f, maxWater) / maxWater);
-        GetComponent<Renderer>().material.SetColor("_Color", lerpedColor);
+        soilMaterial.SetFloat("_WaterLevel", 5*WaterLevel/maxWater);
     }
 
     void OnParticleCollision(GameObject other)

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WebcamLightLevel : MonoBehaviour
 {
+    public bool webcamEnabled = true;
     public float scaleRatio = 8f;
     public float lowLightThreshold = 90f;
     public float transitionDuration = 0.25f;
@@ -30,6 +31,9 @@ public class WebcamLightLevel : MonoBehaviour
 
     void Update()
     {
+        if (!webcamEnabled)
+            return;
+
         float lightLevel = CalculateLightLevel();
 
         if (dayManager.IsDay())
@@ -70,6 +74,9 @@ public class WebcamLightLevel : MonoBehaviour
 
     void OnGUI()
     {
+        if(!webcamEnabled)
+            return;
+
         if (showWebcamAndLight)
         {
             GUI.DrawTexture(webcamRect, webcamTexture, ScaleMode.ScaleToFit);
