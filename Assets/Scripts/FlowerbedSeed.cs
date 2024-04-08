@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class FlowerbedSeed : MonoBehaviour
 {
-    public GameObject[] dirtPiles = new GameObject[7]; // Array to store the Dirt_Pile objects
-    public float maxDistance = 0.1f; // Maximum distance from raycast hit point to dirt pile
+    public GameObject[] dirtPiles;
+    public float maxDistance = 0.1f; 
 
     void Start()
     {
 
         string debugArray = "";
         // Find Dirt_Pile objects by their tags
-        GameObject[] allDirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
-        for (int i = 0; i < Mathf.Min(allDirtPiles.Length, dirtPiles.Length); i++)
+        dirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
+        
+        // Check if any Dirt_Pile objects are found
+        if (dirtPiles.Length == 0)
         {
             dirtPiles[i] = allDirtPiles[i];
             debugArray += dirtPiles[i].name + " ";
@@ -28,9 +30,9 @@ public class FlowerbedSeed : MonoBehaviour
         }
     }
 
+
     void Update()
     {
-        // Create a ray from the center of the screen
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
         if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.B)) || (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKeyDown(KeyCode.JoystickButton2)))
@@ -62,7 +64,9 @@ public class FlowerbedSeed : MonoBehaviour
 
     void InstantiateSeed(Vector3 position)
     {
+        // Adjust the position slightly above the dirt pile's position
         position += Vector3.up * 0.1f;
+
         Debug.Log("Seed instantiated at position: " + position);
 
         GameObject seed = GameObject.CreatePrimitive(PrimitiveType.Sphere); // Create a sphere object
