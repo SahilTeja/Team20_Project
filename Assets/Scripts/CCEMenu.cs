@@ -18,9 +18,14 @@ public class CCEMenu : MonoBehaviour
     private ViewActive VA;
     private TextMeshProUGUI textbox;
 
+
+    public GameObject seedPrefab;
+    public Transform spawnPoint;
+    
     // Start is called before the first frame update
     void Start()
     {
+         
         CM = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
         gameController = GameObject.FindGameObjectWithTag("GameController");
         clipboard = gameController.GetComponent<Clipboard>();
@@ -37,13 +42,19 @@ public class CCEMenu : MonoBehaviour
         if (!clipboard)
             Debug.LogError("Clipboard not found on GameController");
 
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = transform;
+        }
+
     }
 
     public void Copy()
     {
         clipboard.Copy(transform.root.gameObject);
         clipboard.setCopy(true);
-        Exit();
+        Daikon();
     }
 
     public void Cut()
@@ -53,29 +64,62 @@ public class CCEMenu : MonoBehaviour
         transform.root.gameObject.SetActive(false);
     }
 
-    public void Exit()
+    public void Daikon()
     {
-        menuMan.exitMenu();
+        //menuMan.exitMenu();
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
     }
 
-    public void Raycast()
+    public void Parsnip()
     {
-        int temp = raycast[++rayIndex % raycast.Length];
-        VA.distance = temp;
-        textbox.text = "Raycast: " + temp;
+        
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
+
     }
 
-    public void Speed()
+    public void Radish()
     {
-        int temp = speed[++speedIndex % (speed.Length)];
-        CM.speed = temp;
-        textbox.text = "Speed: " + temp;
+       
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
     }
 
-    public void Quit()
+    public void Beet()
     {
-        Application.Quit();
+        
+        if (seedPrefab != null)
+        {
+            // Instantiate the seed prefab at the spawn point
+            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Seed prefab is not assigned!");
+        }
     }
-
-
+    
 }
+    
