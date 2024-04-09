@@ -9,24 +9,13 @@ public class FlowerbedSeed : MonoBehaviour
 
     void Start()
     {
-
-        string debugArray = "";
         // Find Dirt_Pile objects by their tags
         dirtPiles = GameObject.FindGameObjectsWithTag("DirtPile");
         
         // Check if any Dirt_Pile objects are found
         if (dirtPiles.Length == 0)
         {
-            dirtPiles[i] = allDirtPiles[i];
-            debugArray += dirtPiles[i].name + " ";
-        }
-
-        Debug.Log(debugArray);
-
-        // Check if the number of Dirt_Pile objects found matches the array size
-        if (allDirtPiles.Length < dirtPiles.Length)
-        {
-            Debug.LogWarning("Number of Dirt_Pile objects found is less than expected.");
+            Debug.LogWarning("No Dirt_Pile objects found.");
         }
     }
 
@@ -35,18 +24,13 @@ public class FlowerbedSeed : MonoBehaviour
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
-        if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.B)) || (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKeyDown(KeyCode.JoystickButton2)))
+        if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.N)) || (SystemInfo.deviceType == DeviceType.Handheld && Input.GetKeyDown(KeyCode.JoystickButton3)))
         {
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green); // Draw the raycast for debugging
-
-                if(hit.transform.CompareTag("DirtPile"))
-                {
-                    Debug.Log("Hit " + hit.transform.name);
-                }
 
                 for (int i = 0; i < dirtPiles.Length; i++)
                 {
