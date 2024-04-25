@@ -349,7 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &54083717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,7 +1887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &292201131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +2002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &302922479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2153,7 +2159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &311272170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,7 +2306,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 0
+  currentStage: 0
   growthAmount: 0.1
+  plantType: 0
 --- !u!114 &348959249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,8 +2447,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 491694291}
   - {fileID: 682534189}
+  - {fileID: 491694291}
   - {fileID: 2135008459}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -2656,7 +2666,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &408279947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2873,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &444684183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3175,7 +3189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &450023821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5141,7 +5157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &804923650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,7 +5272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &829371389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -5274,7 +5294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &863528927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3729507635577918963, guid: 31f5775cd16314a4eb711a68f4959d04, type: 3}
@@ -5648,7 +5670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &962854518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5790,7 +5814,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &997484481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6232,7 +6258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 0
+  currentStage: 0
   growthAmount: 0.1
+  plantType: 0
 --- !u!114 &1025473473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6813,7 +6841,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1113970698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -7576,7 +7606,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1229442476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0fe1b80592a0144babd1bf297ad32ad, type: 3}
@@ -7781,7 +7813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1302455150
 GameObject:
   m_ObjectHideFlags: 0
@@ -8096,7 +8130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1397534706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -8195,7 +8231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &1427553619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9059,7 +9097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1001 &1537445965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9140,7 +9180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1538286063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -9160,7 +9202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &1553621647
 GameObject:
   m_ObjectHideFlags: 0
@@ -9452,7 +9496,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 0
+  currentStage: 0
   growthAmount: 0.1
+  plantType: 0
 --- !u!114 &1588934788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10411,7 +10457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 0
+  currentStage: 0
   growthAmount: 0.1
+  plantType: 0
 --- !u!114 &1813382220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11297,7 +11345,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   numStages: 3
+  currentStage: 0
   growthAmount: 0.5
+  plantType: 0
 --- !u!1 &2095918123
 GameObject:
   m_ObjectHideFlags: 0
@@ -11363,7 +11413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095918123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b2edc2b93801e748804b89e40537b84, type: 3}
   m_Name: 

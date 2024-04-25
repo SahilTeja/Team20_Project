@@ -94,7 +94,7 @@ public class RaycastActions: MonoBehaviour
     {
         if (SystemInfo.deviceType == DeviceType.Desktop && !Input.GetKeyDown("k"))
             return false;
-        else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton10))
+        else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton5))
             return false;
         return true;
     }
