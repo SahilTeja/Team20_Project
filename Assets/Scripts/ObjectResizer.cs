@@ -6,6 +6,7 @@ public class ObjectResizer : MonoBehaviour
     private bool isGrowing = false; // Flag to track growth state
     public float growTime = 1.0f;
     private float growthEnd = 0;
+    private GameObject effect;
 
     public int numStages = 3;
     public int currentStage = 0;
@@ -20,6 +21,7 @@ public class ObjectResizer : MonoBehaviour
     {
         growthEnd=Time.time;
         soil = GetComponentInParent<DummyPlant>();
+        effect = transform.GetChild(0).gameObject;
     }
 
     // Start growing the object
@@ -32,6 +34,10 @@ public class ObjectResizer : MonoBehaviour
             Debug.Log("DayTime");
             growthEnd = Time.time + growTime;
             currentStage++;
+            if(currentStage >= numStages)
+            {
+                effect.SetActive(true);
+            }
             soil.WaterLevel = (soil.WaterLevel - soil.neededWater);
             if(soil.WaterLevel < 0)
             {
