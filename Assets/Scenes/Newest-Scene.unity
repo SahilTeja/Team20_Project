@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14784297, g: 0.36659104, b: 0.5810956, a: 1}
+  m_IndirectSpecularColor: {r: 0.14741531, g: 0.36589086, b: 0.58208454, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -678,6 +678,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 1
+--- !u!114 &119682946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119682940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &131975976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1081,43 @@ Transform:
   m_Father: {fileID: 1130776086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &196418017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196418018}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &196418018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196418017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1902046027}
+  m_Father: {fileID: 1075364082}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &208537690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,6 +1383,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 14
+--- !u!114 &274272255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274272249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &292201131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1692,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 0
 --- !u!114 &348959247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,6 +2219,36 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &428335114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428335102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
+--- !u!114 &428335115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428335102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &433028074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -2173,6 +2276,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 5
+--- !u!114 &433028080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433028074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!4 &438515512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3729507635578079699, guid: 31f5775cd16314a4eb711a68f4959d04, type: 3}
@@ -2552,6 +2672,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 20
+--- !u!114 &492474410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492474404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &509560341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +2809,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 10
 --- !u!114 &521699188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,6 +2832,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &521699192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521699182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &528813965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -2973,6 +3127,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 17
+--- !u!114 &624620273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624620267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &625102519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3494,6 +3665,10 @@ PrefabInstance:
       propertyPath: InitialModule.gravityModifier.scalar
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3975755338319131451, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     - target: {fileID: 3975755338336337090, guid: f495a0761d0e3d94380258aeefb43852, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4266,6 +4441,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 19
+--- !u!114 &877891514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877891508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &886471090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4593,6 +4785,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 896336822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &898029509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1290990975921246276, guid: b2bf8a327ccf6eb439d3ddda86d3c0c4, type: 3}
+  m_PrefabInstance: {fileID: 5308813073393045178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &911929321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4711,6 +4908,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 4
+--- !u!114 &915577472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915577466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &953865249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5174,6 +5388,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 0
 --- !u!114 &1025473471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5301,6 +5517,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025473468}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1026777372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026777373}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026777373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026777372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1648489353}
+  m_Father: {fileID: 1075364082}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1027260426
 GameObject:
   m_ObjectHideFlags: 0
@@ -5359,6 +5612,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &1042649375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042649363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &1047807029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,6 +5732,126 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
+--- !u!1 &1075364081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075364082}
+  - component: {fileID: 1075364084}
+  - component: {fileID: 1075364085}
+  - component: {fileID: 1075364086}
+  m_Layer: 5
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1075364082
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075364081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1711629997}
+  - {fileID: 196418018}
+  - {fileID: 1026777373}
+  m_Father: {fileID: 1176135428}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1075364084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075364081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.8490566, g: 0.13216448, b: 0.13216448, a: 1}
+    m_HighlightedColor: {r: 0.52086353, g: 0.8962264, b: 0.18178178, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1648489354}
+  m_FillRect: {fileID: 1902046027}
+  m_HandleRect: {fileID: 1648489353}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1075364085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075364081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
+--- !u!225 &1075364086
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075364081}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1086538729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,6 +6048,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &1113905546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113905534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &1117536755
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,6 +6470,107 @@ Transform:
   m_Father: {fileID: 1684187857}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1176135427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176135428}
+  - component: {fileID: 1176135431}
+  - component: {fileID: 1176135430}
+  - component: {fileID: 1176135429}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1176135428
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176135427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1075364082}
+  m_Father: {fileID: 1403287873}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1176135429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176135427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1176135430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176135427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1176135431
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176135427}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1189647968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -6094,6 +6598,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 8
 --- !u!114 &1189647974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6115,6 +6621,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &1189647978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189647968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &1210312201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6808,6 +7329,26 @@ Transform:
   m_Father: {fileID: 1684187857}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1403287873 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1290066955296424512, guid: b2bf8a327ccf6eb439d3ddda86d3c0c4, type: 3}
+  m_PrefabInstance: {fileID: 5308813073393045178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403287878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898029509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &1416984632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3729507635577918963, guid: 31f5775cd16314a4eb711a68f4959d04, type: 3}
@@ -6860,6 +7401,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &1426862029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426862017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &1427572568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -7946,6 +8502,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 6
+--- !u!114 &1566854329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566854323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1 &1570458183
 GameObject:
   m_ObjectHideFlags: 0
@@ -8157,6 +8730,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 0
 --- !u!114 &1588934786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8329,6 +8904,99 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 18
+--- !u!114 &1618740317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618740311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
+--- !u!1 &1648489352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648489353}
+  - component: {fileID: 1648489355}
+  - component: {fileID: 1648489354}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1648489353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648489352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1026777373}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1648489354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648489352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1648489355
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648489352}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1669645302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8535,6 +9203,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6355892348421818012, guid: ffa1d3d761e5eff468dffd01f0c94d77, type: 3}
   m_PrefabInstance: {fileID: 1466793921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711629996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711629997}
+  - component: {fileID: 1711629999}
+  - component: {fileID: 1711629998}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1711629997
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711629996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1075364082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1711629998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711629996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1711629999
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711629996}
+  m_CullTransparentMesh: 1
 --- !u!1 &1729675948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010903160450, guid: 8dfbe94bc89610d489620aca436a33ae, type: 3}
@@ -8562,6 +9306,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 15
 --- !u!1 &1751632988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8993,6 +9739,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 0
 --- !u!114 &1813382218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9332,6 +10080,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 1896912174}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1902046026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902046027}
+  - component: {fileID: 1902046029}
+  - component: {fileID: 1902046028}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1902046027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902046026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 196418018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1902046028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902046026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1902046029
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902046026}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1910272120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9662,6 +10486,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 2
+--- !u!114 &1960981002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960980996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &1980524887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9763,6 +10604,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 12
 --- !u!114 &1981544965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9784,6 +10627,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxDistance: 0.5
+--- !u!114 &1981544969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981544959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &2010275793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10132,6 +10990,23 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 1075364085}
+  plantIndex: 3
+--- !u!114 &2104960962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104960956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933cc9a2e9d28e243bc1ddb32672dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBars: []
+  maxWateringProgress: 20
+  progressBarCanvas: {fileID: 1075364086}
 --- !u!1001 &2121945521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10238,6 +11113,8 @@ MonoBehaviour:
   maxWater: 20
   neededWater: 15
   initialScale: {x: 0, y: 0, z: 0}
+  progressBarManager: {fileID: 0}
+  plantIndex: 16
 --- !u!1 &2147240835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616580530717364, guid: 081319ef3e436a44295662d8fa47dd02, type: 3}
@@ -10275,6 +11152,14 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 342691800}
+    - target: {fileID: 1177240451845100097, guid: 3a656f7dd87343b49a11371f876c6f3c, type: 3}
+      propertyPath: plantIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177240451845100097, guid: 3a656f7dd87343b49a11371f876c6f3c, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     - target: {fileID: 1177779303657684865, guid: 3a656f7dd87343b49a11371f876c6f3c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10336,6 +11221,14 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 342691800}
+    - target: {fileID: 2081274057266094370, guid: 9f969b2c4b35b314e904e83b714710ce, type: 3}
+      propertyPath: plantIndex
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081274057266094370, guid: 9f969b2c4b35b314e904e83b714710ce, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     - target: {fileID: 2084074018110284955, guid: 9f969b2c4b35b314e904e83b714710ce, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -10449,6 +11342,10 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 342691800}
+    - target: {fileID: 8999965409434837351, guid: b2bf8a327ccf6eb439d3ddda86d3c0c4, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2bf8a327ccf6eb439d3ddda86d3c0c4, type: 3}
 --- !u!1001 &7401686240521377876
@@ -10506,6 +11403,14 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 342691800}
+    - target: {fileID: 7401686240508471840, guid: 34eeb2cb91f7d194ab79f62556db74e5, type: 3}
+      propertyPath: plantIndex
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401686240508471840, guid: 34eeb2cb91f7d194ab79f62556db74e5, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     - target: {fileID: 7402686243457576860, guid: 34eeb2cb91f7d194ab79f62556db74e5, type: 3}
       propertyPath: m_Name
       value: Dirt_Pile (2)
@@ -10527,6 +11432,14 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 342691800}
+    - target: {fileID: 9160907669667060903, guid: b48787c79da404c4d9b3f18fce44c671, type: 3}
+      propertyPath: plantIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160907669667060903, guid: b48787c79da404c4d9b3f18fce44c671, type: 3}
+      propertyPath: progressBarManager
+      value: 
+      objectReference: {fileID: 1075364085}
     - target: {fileID: 9163735625954788739, guid: b48787c79da404c4d9b3f18fce44c671, type: 3}
       propertyPath: m_RootOrder
       value: 1

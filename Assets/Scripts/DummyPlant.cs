@@ -8,6 +8,7 @@ public class DummyPlant : MonoBehaviour
     public float maxWater;
     public int neededWater;
     public Vector3 initialScale; // Store the initial scale of the object
+    public ProgressBarManager progressBarManager; // Reference to ProgressBarManager script
 
     void Start()
     {
@@ -29,12 +30,15 @@ public class DummyPlant : MonoBehaviour
 
     void Update()
     {
-        soilMaterial.SetFloat("_WaterLevel", 5*WaterLevel/maxWater);
+        soilMaterial.SetFloat("_WaterLevel", 5 * WaterLevel / maxWater);
     }
 
     void OnParticleCollision(GameObject other)
     {
         if (WaterLevel < 20)
+        {
             WaterLevel++;
+            progressBarManager.UpdateWateringProgress(1); // Update watering progress on the progress bar
+        }
     }
 }
