@@ -92,7 +92,7 @@ public class RaycastActions: MonoBehaviour
 
     private bool IsAPressed()
     {
-        if (SystemInfo.deviceType == DeviceType.Desktop && !Input.GetKeyDown("k"))
+        if (SystemInfo.deviceType == DeviceType.Desktop && !(Input.GetKeyDown("k") || Input.GetKeyDown(KeyCode.JoystickButton10)))
             return false;
         else if (SystemInfo.deviceType == DeviceType.Handheld && !Input.GetKeyDown(KeyCode.JoystickButton5))
             return false;

@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Collections;
+
 
 public class ObjectResizer : MonoBehaviour
 {
@@ -17,12 +19,40 @@ public class ObjectResizer : MonoBehaviour
 
     private DummyPlant soil;
 
+    public float fadeDuration = 1f; // Duration of the fade in seconds
+    public Renderer objectRenderer; // Reference to the Renderer component
+
+    private float currentFadeTime = 0f;
+
     public void Start()
     {
+        if (objectRenderer == null)
+            objectRenderer = GetComponent<Renderer>();
+        
+        StartCoroutine(FadeOutCoroutine());
+
         growthEnd=Time.time;
         soil = GetComponentInParent<DummyPlant>();
         effect = transform.GetChild(0).gameObject;
         DayNightCycleManager.Instance.OnDayNightChange.AddListener(this.OnDayNightChangeHandler);
+    }
+
+    IEnumerator FadeOutCoroutine()
+    {
+        Color originalColor = objectRenderer.material.color;
+        Color col = originalColor;
+        col.a = Mathf.Clamp01(0);
+        objectRenderer.material.color = col;
+        
+        while (currentFadeTime < fadeDuration)
+        {
+            currentFadeTime += Time.deltaTime;
+            float alpha = (currentFadeTime / fadeDuration);
+            Color newColor = originalColor;
+            newColor.a = Mathf.Clamp01(alpha);
+            objectRenderer.material.color = newColor;
+            yield return null;
+        }
     }
 
     // Start growing the object
@@ -85,7 +115,15 @@ public class ObjectResizer : MonoBehaviour
 
     public void Harvest()
     {
-        Destroy(gameObject);
+        // Destroy the parent GameObject
+        if (transform.parent != null)
+        {
+            Destroy(transform.parent.gameObject);
+        }
+        else
+        {
+            Debug.LogError("No parent GameObject to destroy!");
+        }
     }
     
 }
