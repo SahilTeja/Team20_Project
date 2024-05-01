@@ -57,7 +57,7 @@ public class PerspectiveController : MonoBehaviour
         }
 
 
-        if (SystemInfo.deviceType == DeviceType.Desktop && Input.GetKeyDown(KeyCode.JoystickButton3))
+        if (SystemInfo.deviceType == DeviceType.Desktop && (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown("m")))
         {
             ToggleMainMenu();
         }
