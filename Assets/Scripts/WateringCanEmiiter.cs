@@ -26,8 +26,8 @@ public class WateringCanEmiiter : MonoBehaviour
         var emission = water.emission;
         emission.rateOverTime = 20;
         Debug.Log("Watering");
+        
 
-       
     }
 
     void StopWater()
@@ -36,3 +36,6 @@ public class WateringCanEmiiter : MonoBehaviour
         emission.rateOverTime = 0;
     }
 }
+
+
+

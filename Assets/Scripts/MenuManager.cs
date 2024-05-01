@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     private RaycastActions RA;
     private GameObject camera;
 
+    
     public void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -18,8 +19,10 @@ public class MenuManager : MonoBehaviour
         VA = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ViewActive>();
         RA = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RaycastActions>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
+        
     }
 
+    
     public void openMenu(GameObject menu)
     {
         if (currentMenu != null)
@@ -29,6 +32,7 @@ public class MenuManager : MonoBehaviour
         control.SetCharacterController(false);
     }
 
+    
     public void openMainMenu(GameObject menu)
     {
         menu.transform.position = player.transform.position + camera.transform.forward * 3 + Vector3.up*1.5f;

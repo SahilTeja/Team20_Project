@@ -17,11 +17,21 @@ public class CCEMenu : MonoBehaviour
     private CharacterMovement CM;
     private ViewActive VA;
     private TextMeshProUGUI textbox;
-
+    public TextMeshProUGUI tutorialText;
 
     public GameObject seedPrefab;
     public Transform spawnPoint;
-    
+
+
+    public GameObject instructionsPanel; // Reference to the panel containing the instructions
+    public Button tutorialButton;
+    public Button daikonButton;
+    public Button parsnipButton;
+    public Button beetButton;
+    public Button radishButton;
+
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +58,22 @@ public class CCEMenu : MonoBehaviour
             spawnPoint = transform;
         }
 
+        // Ensure the instructions panel is initially hidden
+        instructionsPanel.SetActive(false);
+
+        // Add a listener to the tutorial button's onClick event
+        tutorialButton.onClick.AddListener(ShowInstructions);
+    }
+    
+    public void ShowInstructions()
+    {
+        // Show the instructions panel when the tutorial button is clicked
+        tutorialButton.gameObject.SetActive(false);
+        daikonButton.gameObject.SetActive(false);
+        parsnipButton.gameObject.SetActive(false);
+        beetButton.gameObject.SetActive(false);
+        radishButton.gameObject.SetActive(false);
+        instructionsPanel.SetActive(true);
     }
 
     public void Copy()
@@ -120,6 +146,8 @@ public class CCEMenu : MonoBehaviour
             Debug.LogError("Seed prefab is not assigned!");
         }
     }
+
     
-}
+    }
+
     

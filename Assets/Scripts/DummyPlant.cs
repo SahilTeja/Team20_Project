@@ -1,4 +1,5 @@
-using UnityEngine;
+//original
+/*using UnityEngine;
 
 public class DummyPlant : MonoBehaviour
 {
@@ -38,3 +39,99 @@ public class DummyPlant : MonoBehaviour
             WaterLevel++;
     }
 }
+
+*/
+
+
+/*working using UnityEngine;
+
+public class DummyPlant : MonoBehaviour
+{
+    public int WaterLevel;
+    public ParticleSystem water;
+    private Material soilMaterial;
+    public float maxWater;
+    public int neededWater;
+    public Vector3 initialScale; // Store the initial scale of the object
+    public ProgressBarManager progressBarManager; // Reference to the progress bar manager
+
+    void Start()
+    {
+        Renderer renderer = GetComponent<Renderer>();
+        soilMaterial = renderer.material;
+        WaterLevel = 0;
+        initialScale = transform.localScale; // Store the initial scale
+        ObjectResizer resizer = GetComponentInChildren<ObjectResizer>(); // Get ObjectResizer component
+        if (resizer != null)
+        {
+            // Subscribe to the OnDayNightChange event
+            DayNightCycleManager.Instance.OnDayNightChange.AddListener(resizer.OnDayNightChangeHandler);
+        }
+        else
+        {
+            Debug.LogError("ObjectResizer component not found on the object.");
+        }
+    }
+
+    void Update()
+    {
+        soilMaterial.SetFloat("_WaterLevel", 5 * WaterLevel / maxWater);
+        progressBarManager.UpdateProgressBar(WaterLevel); // Update the progress bar
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        if (WaterLevel < maxWater)
+        {
+            WaterLevel++;
+        }
+    }
+}
+*/
+
+using UnityEngine;
+
+public class DummyPlant : MonoBehaviour
+{
+    public int WaterLevel;
+    public ParticleSystem water;
+    private Material soilMaterial;
+    public float maxWater;
+    public int neededWater;
+    public Vector3 initialScale; // Store the initial scale of the object
+    public ProgressBarManager progressBarManager; // Reference to the progress bar manager
+
+    void Start()
+    {
+        Renderer renderer = GetComponent<Renderer>();
+        soilMaterial = renderer.material;
+        WaterLevel = 0;
+        initialScale = transform.localScale; // Store the initial scale
+        ObjectResizer resizer = GetComponentInChildren<ObjectResizer>(); // Get ObjectResizer component
+        if (resizer != null)
+        {
+            // Subscribe to the OnDayNightChange event
+            DayNightCycleManager.Instance.OnDayNightChange.AddListener(resizer.OnDayNightChangeHandler);
+        }
+        else
+        {
+            Debug.LogError("ObjectResizer component not found on the object.");
+        }
+    }
+
+    void Update()
+    {
+        soilMaterial.SetFloat("_WaterLevel", 5 * WaterLevel / maxWater);
+        progressBarManager.UpdateProgressBar(WaterLevel); // Update the progress bar
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        if (WaterLevel < maxWater)
+        {
+            WaterLevel++;
+        }
+    }
+}
+
+

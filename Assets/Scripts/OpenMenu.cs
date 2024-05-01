@@ -7,11 +7,12 @@ public class OpenMenu : Interaction
 
     private MenuManager menuMan;
     private GameObject menu;
-
+    
     private void Start()
     {
         menuMan = GameObject.FindGameObjectWithTag("GameController").GetComponent<MenuManager>();
         menu = transform.root.Find("Canvas").gameObject;
+        
     }
 
     public override void interact()
@@ -25,6 +26,9 @@ public class OpenMenu : Interaction
         if (DebugMode)
             Debug.Log("Interacting");
 
+        
+
         menuMan.openMenu(menu);
+        
     }
 }
