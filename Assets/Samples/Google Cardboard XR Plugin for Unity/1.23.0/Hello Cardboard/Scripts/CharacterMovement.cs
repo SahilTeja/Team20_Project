@@ -12,6 +12,8 @@ public class CharacterMovement : MonoBehaviour
     [Tooltip("Should be checked if using the Bluetooth Controller to move. If using keyboard, leave this unchecked.")]
     public bool joyStickMode;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,17 @@ public class CharacterMovement : MonoBehaviour
         moveVect += forwardVect * vertComp;
 
         moveVect *= speed;
+
+        if(moveVect == Vector3.zero)
+        {
+            Debug.Log("Standing Still");
+            animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            Debug.Log("Moving");
+            animator.SetBool("isMoving", true);
+        }
      
 
         charCntrl.SimpleMove(moveVect);
