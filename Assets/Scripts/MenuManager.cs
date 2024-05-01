@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
 
     public void exitMenu()
     {
+        if (currentMenu!=null)
         currentMenu.SetActive(false);
         control.SetCharacterController(true);
         currentMenu = null;

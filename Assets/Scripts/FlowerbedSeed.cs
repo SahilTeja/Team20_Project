@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class FlowerbedSeed : MonoBehaviour
 {
-    public GameObject[] dirtPiles;
-    public float maxDistance = 0.1f; 
+    private GameObject[] dirtPiles;
+    [SerializeField]
+    private float maxDistance = 0.1f;
+
+    [SerializeField]
+    private GameObject daikon;
+    [SerializeField]
+    public GameObject radish;
+    [SerializeField]
+    public GameObject parsnip;
+    [SerializeField]
+    public GameObject beet;
+
+    //DaikonParsnipRadishBeet
 
     void Start()
     {
@@ -30,32 +42,37 @@ public class FlowerbedSeed : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green); // Draw the raycast for debugging
-
-                for (int i = 0; i < dirtPiles.Length; i++)
-                {
-                    if (hit.collider.gameObject == dirtPiles[i] && Vector3.Distance(hit.point, dirtPiles[i].transform.position) < maxDistance)
-                    {
-                        Debug.Log("Raycast hit dirt pile " + dirtPiles[i].name);
-                        InstantiateSeed(dirtPiles[i].transform.position);
-                        break;
-                    }
+                if (hit.collider.CompareTag("DirtPile")){
+                        if (hit.collider.gameObject.transform.childCount == 0)
+                            InstantiateSeed(hit.collider.gameObject);
                 }
             }
         }
         
     }
 
-    void InstantiateSeed(Vector3 position)
+    void InstantiateSeed(GameObject parent)
     {
         // Adjust the position slightly above the dirt pile's position
-        position += Vector3.up * 0.1f;
+        //position += Vector3.up * 0.1f;
+        GameObject obj = parsnip;
 
-        Debug.Log("Seed instantiated at position: " + position);
-
-        GameObject seed = GameObject.CreatePrimitive(PrimitiveType.Sphere); // Create a sphere object
-        seed.transform.position = position; // Set the position to the dirt pile's position
-        seed.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Adjust scale as needed
-        seed.GetComponent<Renderer>().material.color = Color.yellow; // Adjust color as needed
+        switch(CCEMenu.getSelection())
+        {
+            case "Daikon":
+                obj = daikon;
+                break;
+            case "Beet":
+                obj = beet;
+                break;
+            case "Radish":
+                obj = radish;
+                break;
+            case "Parsnip":
+                obj = parsnip;
+                break;
+        }
+        Quaternion randomRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        Instantiate(obj, parent.transform.position, randomRotation,parent.transform );
     }
 }

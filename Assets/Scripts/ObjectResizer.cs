@@ -22,6 +22,7 @@ public class ObjectResizer : MonoBehaviour
         growthEnd=Time.time;
         soil = GetComponentInParent<DummyPlant>();
         effect = transform.GetChild(0).gameObject;
+        DayNightCycleManager.Instance.OnDayNightChange.AddListener(this.OnDayNightChangeHandler);
     }
 
     // Start growing the object

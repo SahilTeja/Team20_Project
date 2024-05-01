@@ -8,6 +8,7 @@ public class CCEMenu : MonoBehaviour
 {
 
     private Clipboard clipboard;
+    private static string seedSelection = "Daikon";
     private GameObject gameController;
     private MenuManager menuMan;
     private int[] speed = { 5, 10, 20 };
@@ -50,6 +51,11 @@ public class CCEMenu : MonoBehaviour
 
     }
 
+    public static string getSelection()
+    {
+        return seedSelection;
+    }
+
     public void Copy()
     {
         clipboard.Copy(transform.root.gameObject);
@@ -65,60 +71,43 @@ public class CCEMenu : MonoBehaviour
     }
 
     public void Daikon()
-    {
-        //menuMan.exitMenu();
-        if (seedPrefab != null)
-        {
+    { 
             // Instantiate the seed prefab at the spawn point
-            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("Seed prefab is not assigned!");
-        }
+            seedSelection = "Daikon";
+            //menuMan.exitMenu();
+   
     }
 
     public void Parsnip()
     {
         
-        if (seedPrefab != null)
-        {
+ 
             // Instantiate the seed prefab at the spawn point
-            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("Seed prefab is not assigned!");
-        }
+            seedSelection = "Parsnip";
+            //menuMan.exitMenu();
+  
 
     }
 
     public void Radish()
     {
        
-        if (seedPrefab != null)
-        {
+
             // Instantiate the seed prefab at the spawn point
-            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("Seed prefab is not assigned!");
-        }
+            seedSelection = "Radish";
+            //menuMan.exitMenu();
+
+
     }
 
     public void Beet()
     {
         
-        if (seedPrefab != null)
-        {
+
             // Instantiate the seed prefab at the spawn point
-            Instantiate(seedPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("Seed prefab is not assigned!");
-        }
+            seedSelection = "Beet";
+            //menuMan.exitMenu();
+
     }
     
 }

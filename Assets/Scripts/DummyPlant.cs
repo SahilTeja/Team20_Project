@@ -15,16 +15,6 @@ public class DummyPlant : MonoBehaviour
         soilMaterial = renderer.material;
         WaterLevel = 0;
         initialScale = transform.localScale; // Store the initial scale
-        ObjectResizer resizer = GetComponentInChildren<ObjectResizer>(); // Get ObjectResizer component
-        if (resizer != null)
-        {
-            // Subscribe to the OnDayNightChange event
-            DayNightCycleManager.Instance.OnDayNightChange.AddListener(resizer.OnDayNightChangeHandler);
-        }
-        else
-        {
-            Debug.LogError("ObjectResizer component not found on the object.");
-        }
     }
 
     void Update()
