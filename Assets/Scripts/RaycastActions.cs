@@ -10,6 +10,9 @@ public class RaycastActions: MonoBehaviour
     private GameObject player;
     private bool isActive = true;
     private bool hasPlant;
+    private AudioSource audio;
+    public AudioClip harvest;
+    public AudioClip box;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,7 @@ public class RaycastActions: MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController");
         clipboard = gameController.GetComponent<Clipboard>();
         player = GameObject.FindGameObjectWithTag("Player");
+        audio = GetComponent<AudioSource>();
         if (!gameController)
         {
             Debug.LogError("GameController not found");
@@ -50,6 +54,7 @@ public class RaycastActions: MonoBehaviour
                     if(hasPlant)
                     {
                         Debug.Log("Plant Turned In");
+                        audio.PlayOneShot(box, 0.7f);
                         GameObject player = GameObject.FindGameObjectWithTag("Player");
                         player.GetComponent<WeaponSwitcher>().changeWeapon(0);
                         hasPlant = false;
@@ -62,6 +67,7 @@ public class RaycastActions: MonoBehaviour
                     if(obj.GetComponent<ObjectResizer>().isHarvestable() && !hasPlant)
                     {
                         Debug.Log("Plant is Harvestable");
+                        audio.PlayOneShot(harvest, 0.7f);
                         player.GetComponent<WeaponSwitcher>().changeWeapon(obj.GetComponent<ObjectResizer>().plantType);
                         obj.GetComponent<ObjectResizer>().Harvest();
                         hasPlant = true;
